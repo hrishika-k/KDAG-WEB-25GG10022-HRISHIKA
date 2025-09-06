@@ -1,0 +1,281 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 169.29px;
+  height: 33.6px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15.6px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px red;
+}
+
+nav a:hover {
+  color: red;
+  text-shadow: 0 0 8px red;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Active (Clicked) */
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* Gray navbar line */
+.navbar-line {
+  width: 94%;
+  height: 1px;
+  background: #333;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Landing Section */
+.landing {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.landing h3 {
+  font-size: 95px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.landing .white {
+  color: #ffffff;
+}
+
+.landing .red {
+  color: #ff0000;
+}
+
+.tagline {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.tagline .red {
+  color: #ff0000;
+}
+
+/* Typing effect styles */
+#typing {
+  border-right: 2px solid #ff0000; /* blinking cursor */
+  padding-right: 5px;
+  padding-bottom: -5px;
+  animation: blink 0.7s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: -6px;
+}
+
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: #ff0000; }
+  100% { border-color: transparent; }
+}
+
+
+
+/* Quiz Section */
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#quiz-box {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 600px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: rgb(237, 51, 51);
+  transition: width 0.3s ease;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  background: #111111;
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+}
+
+.option-btn:hover {
+  background: #bbb;
+  color: #000;
+}
+
+/* Disabled look */
+.option-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Prevent hover effect when disabled */
+.option-btn.disabled:hover {
+  background: #222;
+  color: #fff;
+}
+
+.correct {
+  border-color: green !important;
+  background: #153d15 !important;
+}
+
+.wrong {
+  border-color: red !important;
+  background: #3d1515 !important;
+}
+
+#next-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(237, 51, 51);
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  display: none;
+}
+
+.back-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: rgb(237, 51, 51)red;
+}
+
+.explanation {
+  margin-top: 20px;
+  padding: 15px;
+  background: #1c1c1c;
+  border-left: 4px solid rgb(237, 51, 51);
+  border-radius: 6px;
+  color: #ddd;
+  font-size: 14px;
+  display: none;
+}
+
+/* Animation for fade-in + slide-up */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logout_outer_container_01 {
+  opacity: 0; /* hidden initially */
+  animation: fadeSlideUp 0.6s ease-out forwards;
+}

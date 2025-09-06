@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KDAG Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="KDAG Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Events</a></li>
+        <li><a href="#" class="nav-link">Gallery</a></li>
+        <li><a href="#" class="nav-link">ML Sheet</a></li>
+        <li><a href="#" class="nav-link">Resources</a></li>
+        <li><a href="quiz.html" class="nav-link active">Quiz</a></li>
+        <li><a href="#" class="nav-link">Blog</a></li>
+        <li><a href="#" class="nav-link">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="navbar-line"></div>
+
+  <!-- Quiz Section -->
+  <!-- Quiz Section -->
+<section class="quiz-container logout_outer_container_01">
+  <div id="quiz-box">
+    <div class="quiz-header">
+      <span id="question-number">Question 1 of 5</span>
+      <span id="score">Score: 0/5</span>
+    </div>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <h2 id="question">What does ML stand for in the context of data analytics?</h2>
+    <div id="options" class="options"></div>
+    <div id="explanation" class="explanation"></div>
+    <button id="next-btn">Next Question</button>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+</section>
+
+
+  <script src="quiz.js"></script>
+</body>
+</html>
